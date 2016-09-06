@@ -1,0 +1,6 @@
+---
+spring:
+  profiles: dev
+
+account:
+  accountDescription: Savings Account from Service yml
