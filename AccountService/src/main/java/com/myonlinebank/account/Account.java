@@ -1,11 +1,30 @@
 package com.myonlinebank.account;
 
+import java.util.List;
+
 public class Account   {
 
 	private String accountNumber;
 	private String accountType;
 	private String accountDescription;
 	private Double accountBalance;
+	private List<TransactionHistory> transactionHistoryList;
+	
+	public Account(String accountNumber, String accountType, String accountDescription, Double accountBalance,
+			List<TransactionHistory> transactionHistoryList) {
+		super();
+		this.accountNumber = accountNumber;
+		this.accountType = accountType;
+		this.accountDescription = accountDescription;
+		this.accountBalance = accountBalance;
+		this.transactionHistoryList = transactionHistoryList;
+	}
+	public List<TransactionHistory> getTransactionHistoryList() {
+		return transactionHistoryList;
+	}
+	public void setTransactionHistoryList(List<TransactionHistory> transactionHistoryList) {
+		this.transactionHistoryList = transactionHistoryList;
+	}
 	public String getAccountNumber() {
 		return accountNumber;
 	}
@@ -30,13 +49,7 @@ public class Account   {
 	public void setAccountBalance(Double accountBalance) {
 		this.accountBalance = accountBalance;
 	}
-	public Account(String accountNumber, String accountType, String accountDescription, Double accountBalance) {
-		super();
-		this.accountNumber = accountNumber;
-		this.accountType = accountType;
-		this.accountDescription = accountDescription;
-		this.accountBalance = accountBalance;
-	}
+
 	
 	
 }
